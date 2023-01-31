@@ -9,18 +9,34 @@
     <script>
         var day_index = 0;
         var days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday",
-                           "Friday", "Saturday", "Sunday"];
-  
+            "Friday", "Saturday", "Sunday"];
+
+        var month_index = 0;
+        var names_of_months = ["January", "February", "March", "April", "May",
+            "June", "July", "August", "September", "October",
+            "November", "December"];
+
         function changeDay() {
-          day_index = (day_index + 1) % 7;
-          document.getElementById("day").innerHTML = days_of_week[day_index];
+            day_index = (day_index + 1) % 7;
+            document.getElementById("day").innerHTML = days_of_week[day_index];
         }
-      </script>
+        function changeMonth() {
+        month_index = (month_index + 1) % 12;
+        document.getElementById("month").innerHTML = names_of_months[month_index];
+      }
+    </script>
 </head>
 
 <body>
-    <div id="day">Monday</div>
-    <button onclick="changeDay()">Change Day</button>
+    <div style="text-align:center;">
+        <div id="day">Monday</div>
+        <button onclick="changeDay()">Change Day</button>
+      </div>
+      <br><br>
+      <div style="text-align:center;">
+        <div id="month">January</div>
+        <button onclick="changeMonth()">Change Month</button>
+      </div>
 </body>
 
 </html>
