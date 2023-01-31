@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+    <script>
+        let text = "Hello!";
+        function changeText() {
+          if (text === "Hello!") {
+            text = "Well done!";
+          } else {
+            text = "Hello!";
+          }
+          document.getElementById("text").innerHTML = text;
+        }
+      </script>
+</head>
+
+<body>
+    <div id="text">Hello!</div>
+    <button onclick="changeText()">Change Text</button>
+</body>
+
+</html>
