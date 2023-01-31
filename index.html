@@ -9,7 +9,21 @@
     <style>
         body {
           background-color: lightyellow;
+          font-size: larger;
         }
+        button {
+        font-size: 20px;
+        padding: 10px 20px;
+        border-radius: 10px;
+        background-color: lightgray;
+        border: none;
+      }
+      button:hover {
+        background-color: goldenrod;
+      }
+      button:active {
+        background-color: green;
+      }
       </style>
     <script>
         var day_index = 0;
@@ -34,12 +48,10 @@
 
 <body>
     <div style="text-align:center;">
-        <div id="day">Monday</div>
+        <div id="day">Monday</div><br/><br/>
+        <div id="month">January</div><br/><br/>
+
         <button onclick="changeDay()">Change Day</button>
-      </div>
-      <br><br>
-      <div style="text-align:center;">
-        <div id="month">January</div>
         <button onclick="changeMonth()">Change Month</button>
       </div>    
 </body>
