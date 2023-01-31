@@ -7,21 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project 1</title>
     <script>
-        let text = "Hello!";
-        function changeText() {
-          if (text === "Hello!") {
-            text = "Well done!";
-          } else {
-            text = "Hello!";
-          }
-          document.getElementById("text").innerHTML = text;
+        var day_index = 0;
+        var days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday",
+                           "Friday", "Saturday", "Sunday"];
+  
+        function changeDay() {
+          day_index = (day_index + 1) % 7;
+          document.getElementById("day").innerHTML = days_of_week[day_index];
         }
       </script>
 </head>
 
 <body>
-    <div id="text">Hello!</div>
-    <button onclick="changeText()">Change Text</button>
+    <div id="day">Monday</div>
+    <button onclick="changeDay()">Change Day</button>
 </body>
 
 </html>
